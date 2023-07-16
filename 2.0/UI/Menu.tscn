@@ -263,12 +263,9 @@ margin_bottom = 128.0
 rect_pivot_offset = Vector2( 512, 64 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 12 )
-text = "Your Title here"
+text = "Cats Vs Zombies"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
 autoplay = "Wobble"
