@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://UI/Transition/Transition.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/Menu.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://UI/DialogBox/DialogBox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/DialogArea/Assets/Sign.png" type="Texture" id=11]
 [ext_resource path="res://Objects/DialogArea/DialogArea.tscn" type="PackedScene" id=12]
+[ext_resource path="res://joystick/virtual_joystick.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -275,6 +276,14 @@ mouse_filter = 2
 start_closed = true
 
 [node name="DialogArea" parent="." instance=ExtResource( 12 )]
+
+[node name="Virtual joystick" parent="." instance=ExtResource( 13 )]
+joystick_mode = 1
+visibility_mode = 1
+action_left = "left"
+action_right = "right"
+action_up = "up"
+action_down = "down"
 
 [connection signal="timeout" from="Load" to="." method="_on_Load_timeout"]
 [connection signal="button_down" from="Play" to="." method="_on_Play_button_down"]

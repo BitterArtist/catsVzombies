@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://World/Background.tres" type="TileSet" id=1]
 [ext_resource path="res://Objects/DeathTrigger/DeathTrigger.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Objects/BoostGem/BoostGem.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Objects/Swing/Swing.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Objects/Zombies/Zombie1.tscn" type="PackedScene" id=22]
+[ext_resource path="res://joystick/virtual_joystick.tscn" type="PackedScene" id=23]
 
 [sub_resource type="DynamicFont" id=13]
 size = 72
@@ -278,6 +279,14 @@ position = Vector2( 560, 280 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Virtual joystick" parent="UI" instance=ExtResource( 23 )]
+joystick_mode = 1
+visibility_mode = 1
+action_left = "left"
+action_right = "right"
+action_up = "up"
+action_down = "down"
 
 [node name="CoinCounter" parent="UI" instance=ExtResource( 5 )]
 anchor_right = 0.0

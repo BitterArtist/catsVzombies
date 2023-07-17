@@ -8,13 +8,23 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Control",
+"class": "VirtualJoystick",
+"language": "GDScript",
+"path": "res://joystick/virtual_joystick.gd"
+} ]
+_global_script_class_icons={
+"VirtualJoystick": ""
+}
+
 [application]
 
-config/name="2D Platformer Toolkit 2"
+config/name="Cats Vs Zombies"
 run/main_scene="res://UI/Menu.tscn"
 boot_splash/image="res://UI/Black.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://UI/icon.png"
+config/icon="res://UI/cvz.png"
 
 [autoload]
 
@@ -24,6 +34,10 @@ Global="*res://Global/Global.gd"
 
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+
+[filesystem]
+
+import/icon="res://UI/icon.png"
 
 [gui]
 
