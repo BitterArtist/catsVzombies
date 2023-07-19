@@ -15,3 +15,7 @@ func _on_Load_timeout():
 	Global.current_coins = 0
 	Global.block_switch = true
 	var _error = get_tree().change_scene("res://World/World.tscn")
+
+
+func _on_TouchScreenButton_pressed():
+	Input.action_press("jump")
